@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(248, 249, 250, 0.8); /* Couleur de fond avec transparence */
+    background-image: url("/static/dist/img/sen.png"); /* Image de fond */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le conteneur */
+    background-position: center center; /* Positionner l'image au centre */
+}
+
+.brand-image {
+    width: 100px; /* Largeur souhaitée */
+    height: auto; /* Hauteur ajustée automatiquement pour conserver les proportions */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+}
+
+p {
+    color: #6c757d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
