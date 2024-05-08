@@ -1,16 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgba(248, 249, 250, 0.8); /* Couleur de fond avec transparence */
-    background-image: url("/static/dist/img/sen.png"); /* Image de fond */
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Ajuster la taille de l'image pour couvrir tout le conteneur */
-    background-position: center center; /* Positionner l'image au centre */
+    background-color: rgb(255, 255, 255); /* Couleur de fond avec transparence *
 }
 
 .brand-image {
     width: 100px; /* Largeur souhaitée */
     height: auto; /* Hauteur ajustée automatiquement pour conserver les proportions */
 }
+footer{
+    background-color: #09ff09;
+}
+.contenu {
+    text-align: center;
+}
+.cc:hover{
+    color: red;
+}
+
 
 .container {
     max-width: 800px;
@@ -21,9 +27,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: #007bff;
-}
 
 p {
     color: #6c757d;
@@ -39,10 +42,13 @@ li {
 }
 
 a {
-    color: #343a40;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+}
+nav{
+    background-color: #09ff09;
 }

@@ -3,7 +3,7 @@ import geopandas as gpd
 import pandas as pd
 import pymongo
 from bokeh.plotting import figure, output_file, save
-from bokeh.models import GeoJSONDataSource, NumeralTickFormatter
+from bokeh.models import GeoJSONDataSource, NumeralTickFormatter, HoverTool
 from bokeh.palettes import Cividis
 from bokeh.transform import linear_cmap
 
@@ -101,6 +101,87 @@ def ousm():
     save(map_plot)
 
     return render_template("ous.html")
+
+@app.route('/cand')
+def candidat():
+
+    return  render_template('candidat.html')
+
+
+@app.route('/carte')
+def carte():
+    # Importer les données GeoJSON
+    data = gpd.read_file('export.geojson')
+
+    # Connexion à la base de données MongoDB
+    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    db = client["proj"]
+    collection = db["pfc"]
+
+    # Récupérer les données MongoDB
+    data1 = list(collection.find())
+    df = pd.DataFrame(data1)
+    df.drop('_id', axis=1, inplace=True)
+    df_fusionne = df.groupby('Région').sum(numeric_only=True).reset_index()
+
+    # Fusionner les données
+    data = data.merge(df_fusionne, left_on='name:frr', right_on='Région', how='left')
+
+    # Créer la GeoJSONDataSource
+    geo_source = GeoJSONDataSource(geojson=data.to_json())
+
+    # Configurer les infobulles
+    TOOLTIPS = [
+        ("Région", "@name:frr"),
+    ]
+    # Configurer la figure Bokeh
+    map_plot = figure(
+        height=200,
+        width=300,
+        sizing_mode="scale_width",
+        tooltips=TOOLTIPS,
+        title="Carte électorale",
+        x_axis_location=None,
+        y_axis_location=None,
+        toolbar_location=None,
+    )
+    map_plot.grid.grid_line_color = None
+
+    # Dessiner les polygones des états
+    # sen = map_plot.patches(
+    #     xs="xs",
+    #     ys="ys",
+    #     fill_color=linear_cmap(field_name="Ousmane SONKO", palette=Cividis[256], low=data["Ousmane SONKO"].min(),
+    #                            high=data["Ousmane SONKO"].max()),
+    #     source=geo_source,
+    #     line_color="darkgrey",
+    #     line_width=1,
+    # )
+    sen = map_plot.patches(
+        xs="xs",
+        ys="ys",
+        fill_color="green",  # couleur de fond
+        line_color="darkgrey",
+        line_width=1,
+        hover_fill_color="red",  # couleur de survol
+        source=geo_source,
+    )
+
+    # Ajouter un outil Hover pour afficher le nom de la région au survol
+    hover = HoverTool()
+
+    hover.tooltips = [
+        ("Région", "@name:frr"),
+    ]
+
+    map_plot.add_tools(hover)
+
+
+    # Sauvegarder le graphique Bokeh dans un fichier HTML temporaire
+    output_file("templates/map_ous.html")
+    save(map_plot)
+
+    return render_template("carte.html")
 
 @app.route('/as')
 def ag():

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg " style="background-color: #09ff09">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">République du Sénégal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Accueil</a>
+                        <a class="nav-link" aria-current="page" href="/carte">Carte Electorale</a>
+                        <a class="nav-link" href="/cand">Candidats</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="/static/cand.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item active">
+                <img src="/static/cand.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item">
+                <img src="/static/cand.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <br><br>
+
+    <div class="container-md w-75">
+        <h1>Voici les différents candidats de l'élection présidentielle</h1>
+        <br><br><br><br>
+        
+        
+        <div class="card mb-3" style="max-width: 700px;">
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/static/dist/img/mack.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Macky SALL</h5>
+                    <p class="card-text">Né le 11 décembre 1961 à Fatick et est un homme d'État sénégalais.</p>
+                    <p class="card-text"><small class="text-body-secondary"><b>Partis Politque :</b> <h6>APR</h6>  </small></p>
+
+                      <a type="button" href="/ms" class="btn btn-outline-success " style="width: 100px"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg></a>
+
+                  </div>
+                </div>
+              </div></div>
+            <div class="card mb-3" style="max-width: 700px;">
+          <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/static/dist/img/ousma.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Ousmane SONKO</h5>
+                    <p class="card-text"> Né le 15 juillet 1974 à Thiès et est un homme politique sénégalais, député à l'Assemblée nationale depuis 2017.
+                    Ousmane Sonko a commencé sa carrière comme inspecteur principal des impôts et des domaines. Il a été vérificateur fiscal et chef de Brigade de vérification
+                        fiscale, chargé du secteur immobilier.
+                        Il a également été auditeur interne à la Direction du contrôle interne (DCI) de la Direction générale
+                        des impôts et domaines (DGID), chargé de la rédaction de la charte de déontologie de la DGID.</p>
+                    <p class="card-text"><small class="text-body-secondary"><b>Partis Politque :</b> <h6>PASTEF</h6>  </small></p>
+                      <a type="button" href="/ous" class="btn btn-outline-success " style="width: 100px"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 700px;">
+          <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/static/dist/img/idi.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Idrissa SECk</h5>
+                    <p class="card-text">Est un homme d'État sénégalais, né le 9 août 1959 à Thiès, Premier ministre de 2002 à 2004,
+                        maire de Thiès de 2002 à 2014 et président du Conseil économique. Idrissa Seck est le fondateur du cabinet de
+                        conseil GDP INITIATIVES (Global Development for Peace) et d'ÉPI SA (Epistemon International), une institution
+                        d'éducation et de santé</p>
+                    <p class="card-text"><small class="text-body-secondary"><b>Partis Politque :</b> <h6>REWMI</h6>  </small></p>
+                     <a type="button" href="/idy" class="btn btn-outline-success " style="width: 100px"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 700px;">
+          <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/static/dist/img/niang.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Macdiké NIANG</h5>
+                    <p class="card-text">Né à Saint-Louis le 25 septembre 1953 et est un avocat et un homme politique sénégalais.
+                        Ministre de la Justice dans plusieurs gouvernements, il est ministre des Affaires étrangères entre le 1er
+                        octobre 2009 et le 3 avril 2012.</p>
+                    <p class="card-text"><small class="text-body-secondary"><b>Partis Politique :</b> <h6>Indépendant</h6>  </small></p>
+                     <a type="button" href="/mad" class="btn btn-outline-success " style="width: 100px"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg></a>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 700px;">
+          <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/static/issa.jpeg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">El Hadj SALL</h5>
+                    <p class="card-text">Est un universitaire et homme politique sénégalais. Élu député en juillet 2017,
+                        il est le candidat à l'élection présidentielle de 2019 du Parti de l'unité et du rassemblement (PUR).</p>
+                    <p class="card-text"><small class="text-body-secondary"><b>Partis Politque :</b> <h6>PUR</h6>  </small></p>
+                     <a type="button" href="/ehj" class="btn btn-outline-success " style="width: 100px"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg></a>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" STYLE="width: 500px">
+            <div class="card " style="width: 500px;margin-left: 50px">
+              <div class="card-body">
+                <h5 class="card-title">A propos</h5>
+                <p class="card-text">Notre plateforme est un programme de mobilisation citoyenne pour une participation massive et de
+                    qualité au processus électoral en utilisant les potentialités du numérique.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card " style="width: 500px;margin-left: 150px ">
+              <div class="card-body">
+                <h5 class="card-title font-monospace">Nous contacter</h5>
+                <p class="card-text font-monospace">Dakar, Pikine Ouest, Dagoudane, Rue 102  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg></p>
+                <p class="card-text font-monospace"> Téléphone +221 77 576 78 03  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg></p>
+                <p class="card-text font-monospace">Mail <br> mouhamed.diakhate@univ-thies.sn <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+</html>
